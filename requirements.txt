@@ -8,10 +8,5 @@ tzdata==2025.2
 requests==2.32.3
 python-dateutil==2.9.0.post0
 
-# Optional (if using MySQL or data work)
-mysql-connector-python==9.2.0
-pandas==2.3.1
-numpy==2.2.4
-gunicorn
 
 
