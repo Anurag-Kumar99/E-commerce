@@ -28,15 +28,17 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='home'),
+    path('', include('shop.urls')),     # homepage handled by shop
     path('shop/', include('shop.urls')),
     path('blog/', include('blog.urls')),
-]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 # Serve media files during development
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-# Add this line outside the list
-# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# if settings.DEBUG:
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# # Add this line outside the list
+# # urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
