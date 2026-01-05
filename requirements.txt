@@ -3,9 +3,9 @@ djangorestframework==3.16.0
 asgiref==3.8.1
 pillow==11.3.0
 pytz==2025.2
+requests==2.32.3
 sqlparse==0.5.3
 tzdata==2025.2
-requests==2.32.3
 python-dateutil==2.9.0.post0
 
 gunicorn
@@ -13,3 +13,4 @@ whitenoise
 dj-database-url
 psycopg2-binary
 pycryptodome
+whitenoise
