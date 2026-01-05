@@ -28,7 +28,12 @@ SECRET_KEY = 'django-insecure-12_jb_8ox!8)7!^s)_7wl0*bqe9zs)#=4*yc^jv2%ls#0==s4z
 DEBUG = True
 # DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "web-production-8e98.up.railway.app",
+    ".up.railway.app",
+]
+
 
 
 
@@ -140,4 +145,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_TRUSTED_ORIGINS = [
     "https://e-commerce-prod-test.up.railway.app"
 ]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://web-production-8e98.up.railway.app",
+]
+
 
